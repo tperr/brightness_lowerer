@@ -1,0 +1,10 @@
+[Unit]
+Description=Python instance starting the screen lowerer
+Requires=graphical.target
+
+[Service]
+User=tim
+Environment="DISPLAY=:0"
+WorkingDirectory=/usr/bin
+Environment="PATH=/home/tim/mnt/windows/GitHub/brightness_lowerer/env/bin"
+ExecStart=/home/tim/mnt/windows/GitHub/brightness_lowerer/env/bin/python /home/tim/mnt/windows/GitHub/brightness_lowerer/lowerer.py
